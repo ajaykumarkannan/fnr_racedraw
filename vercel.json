@@ -4,14 +4,4 @@
   "devCommand": "next dev",
   "installCommand": "npm install",
   "outputDirectory": ".next",
-  "crons": [
-    {
-      "path": "/api/cron/run-draws",
-      "schedule": "* * * * *"
-    },
-    {
-      "path": "/api/cron/send-reminders",
-      "schedule": "0 * * * *"
-    }
-  ]
 }
