@@ -62,7 +62,7 @@ Before any of this can be deployed to Vercel, you'll need:
 2. **Resend account** — create at resend.com, verify a sending domain, get API key
 3. **Environment variables** — copy `.env.local.example` to `.env.local` and fill in real values:
    - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
    - `SUPABASE_SERVICE_ROLE_KEY`
    - `RESEND_API_KEY`
    - `CRON_SECRET` (any random string, e.g. `openssl rand -hex 32`)
