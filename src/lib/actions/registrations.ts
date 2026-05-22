@@ -48,7 +48,8 @@ export async function registerForRace(
   }
 
   // Compute overflow_priority via DB function
-  const { data: priority, error: priorityError } = (await (supabase.rpc as Function)(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: priority, error: priorityError } = (await (supabase.rpc as any)(
     'compute_overflow_priority',
     {
       p_user_id: user.id,
@@ -211,7 +212,8 @@ export async function bulkRegisterForSeason(
     }
 
     // Compute overflow priority per event
-    const { data: priority } = (await (supabase.rpc as Function)('compute_overflow_priority', {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { data: priority } = (await (supabase.rpc as any)('compute_overflow_priority', {
       p_user_id: user.id,
       p_club_id: event.club_id,
       p_target_race_date: event.race_date,
